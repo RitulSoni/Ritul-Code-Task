@@ -25,7 +25,7 @@ This document lists the necessary code edits for improving security, dependency 
     - Create a Conda environment file, `environment.yml`, that specifies all necessary Python packages and their versions. This approach is particularly useful for managing projects with complex dependencies.
     - A Conda env will ensure that the project dependencies are isolated and consistent across different machines and environments.
 
-## Edit 4: Refactor and Document Configuration Loading
+## Edit 4: Configuration Loading Change
 - **Objective:** Enhance readability, reusability, and maintainability by centralizing configuration loading.
 - **Details:**
     - **Centralize Configuration Loading:** Create a dedicated function to load the configuration file once and reuse it throughout the project. This reduces redundancy and potential errors from multiple configuration loads.
