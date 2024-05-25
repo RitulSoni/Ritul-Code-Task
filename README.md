@@ -1,7 +1,11 @@
-# ReadMe Guide for the Zoning AI Project
+# AI Zoning Project
 
 ## Introduction
 This project is designed to assist in determining zoning regulations within various municipalities in the United States. The core functionality revolves around processing and responding to zoning-related questions using an AI model. The project includes several key components, each encapsulated in its respective Python file.
+
+## Research Foundation
+This project is based on the research paper "[The Costs of Housing Regulation: Evidence From Generative Regulatory Measurement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4627587)" by Alexander Bartik, Arpit Gupta, and Daniel Milo. The paper provides the theoretical foundation and methodology used in this project.
+
 
 ## Table of Contents
 1. [QuestionMuniPair.py](#questionmunipairpy)
@@ -113,6 +117,17 @@ python QA_Code_V7.py
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
+
+## Authors
+- **Alexander Bartik**  
+  University of Illinois at Urbana-Champaign - Department of Economics
+
+- **Arpit Gupta**  
+  NYU Stern School of Business
+
+- **Daniel Milo**  
+  New York University
+
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
