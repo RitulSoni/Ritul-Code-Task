@@ -76,6 +76,9 @@ python3 QA_Code_V7.py
 5. [Gpt_functions.py](#gpt_functionspy)
 
 
+<details>
+<summary>Click to expand for more info on helper functions</summary>
+
 # QA_Code_V7.py
 
 ### Overview
@@ -146,7 +149,11 @@ flowchart TD
     D11 -->|No| D13
 ```
 In the above diagram each block corresponds to a section of the script, showing how the code progresses through various stages of setup, data retrieval, and processing. 
+<details>
 
+
+<details>
+<summary>Click to expand for more info on helper functions</summary>
 
 # QuestionMuniPair.py
 
@@ -217,6 +224,7 @@ print(final_response)
 ### Conclusion
 
 The `QuestionMuniPair` class is a crucial element of our project, streamlining the handling and processing of zoning-related questions for municipalities. By managing the state transitions and response parsing, it ensures that the project's workflow remains efficient and robust.
+<details>
 
 
 # Helper_functionsV7.py
