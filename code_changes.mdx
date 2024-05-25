@@ -12,5 +12,5 @@ This document lists the necessary code edits for improving security, dependency 
 - **Objective:** Securely manage API keys using environment variables.
 - **Details:** 
   - Introduce the `python-dotenv` library to load environment variables from a `.env` file.
-  - Store the Co:here API key in the `.env` file to keep it out of the source code.
+  - Store the Cohere API key in the `.env` file to keep it out of the source code.
   - Update the `.gitignore` file to exclude the `.env` file from version control, ensuring that sensitive credentials are not exposed in the version history.
