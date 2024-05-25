@@ -333,6 +333,8 @@ flowchart TD
 ```
 </details>
 
+
+
 <details>
 <summary>Gpt_functions.py</summary>
 
@@ -344,10 +346,91 @@ flowchart TD
 - **Batch Management**: Functions for creating, retrieving, and managing batches of API requests.
 - **Embedding Management**: Utilities for working with text embeddings.
 
+### Key Functions
+
+#### API Call Functions
+- **`generate_completion`**: Generates a completion using the OpenAI API based on the provided model, messages, and tools.
+- **`gpt_api_call`**: A wrapper function for making a GPT-3.5 or GPT-4 call with specific parameters like prompt, model, tools, etc.
+- **`gpt_api_wrapper`**: Handles retries and timeouts for API calls to ensure robustness.
+
+#### Batch Management Functions
+- **`create_batch`**: Creates a batch of API requests for processing multiple inputs simultaneously.
+- **`retrieve_batch_results`**: Retrieves the results of a batch of API calls, handling completed and failed statuses.
+- **`upload_jsonl`**: Uploads a JSONL file to the OpenAI API for batch processing.
+
+#### Embedding Functions
+- **`get_embedding`**: Generates embeddings for the provided text using the OpenAI API.
+
+#### Utility Functions
+- **`delete_old_files`**: Deletes files older than a week from the OpenAI API to manage storage.
+- **`answer_question_yes_no`**: Defines a function schema for answering yes/no questions.
+- **`keyword_search`**: Defines a function schema for keyword searches.
+- **`answer_question_numerical`**: Defines a function schema for answering numerical questions.
+- **`answer_question_lot_size`**: Defines a function schema for answering lot size questions.
+- **`answer_question_lot_size_residential`**: Defines a function schema for answering residential lot size questions.
+- **`determine_relevant`**: Defines a function schema to determine if a section is relevant to a question.
+- **`parse_explore_section`**: Defines a function schema to parse if a user wants to explore a section.
+
+### Code Snippet Examples
+
+#### Generating a Completion
+```python
+def generate_completion(model, messages, tools, request):
+    completion = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        tools=tools,
+        temperature=request['body']['temperature'],
+        seed=request['body']['seed'],
+        n=request['body'].get('n', 1),
+    )
+    return completion
+```
+
+#### Creating a Batch
+```python
+def create_batch(batch_data):
+    response = client.batches.create(
+        input_file_id=batch_data["input_file_id"],
+        endpoint=batch_data["endpoint"],
+        completion_window=batch_data["completion_window"]
+    )
+    return response.id
+```
+
+#### Retrieving Batch Results
+```python
+def retrieve_batch_results(batch_id):
+    if batch_id is None:
+        delete_old_files()
+        return []
+
+    response = client.batches.retrieve(batch_id)
+    if response.status == "completed":
+        output_file_id = response.output_file_id
+        output_file_content = client.files.content(output_file_id)
+        output_data = output_file_content.read().decode('utf-8').splitlines()
+        return [json.loads(line) for line in output_data]
+    elif response.status == "failed":
+        raise Exception(f"Batch processing failed: {response.errors}")
+    else:
+        return []
+```
+
 ### Flow Diagram
-![GPT Functions Flow](Gpt_Functions_Flow.png)
+```mermaid
+flowchart TD
+    A[Delete Old Files] --> B[Create Batch]
+    B --> C[Upload JSONL]
+    C --> D[Generate Completion]
+    D --> E[Retrieve Batch Results]
+    E --> F[Get Embedding]
+```
 
 </details>
+
+
+
 
 ## Contributing
 1. Fork the repository.
