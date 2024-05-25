@@ -48,22 +48,38 @@ This document lists the necessary code edits for improving security, dependency 
   - **Implement Caching for Subtask Details:** Modify the `get_subtasks` function to use a dictionary for caching subtask details. This cache will store subtask details once they are computed for a question ID, reducing redundant data processing on subsequent calls.
   - The edit aims to reduce computational overhead and improve response time, especially in environments with repetitive questions. This enhancement boosts system performance without adding significant complexity.
 
-## Edit 6: Grouping function in gpt_functions
+
+### Edit 6: Refactor and Optimize the `context_builder` Function
+
+- **Objective:** Streamline and optimize the `context_builder` function for better performance and readability.
+- **Details:**
+  - **Modularize Complex Functionality:** Break down the `context_builder` function into smaller, more focused functions. For instance, separating the tree flattening, sorting, and reranking processes can make each step clearer and more manageable.
+  - **Enhance Performance with NumPy:** Replace Python lists and loops with NumPy operations where possible, especially in functions like `sort_chunks` that perform calculations over arrays. This could significantly speed up the processing of embeddings.
+  - **Efficient Keyword Handling:** Modify the `get_keywords` function to preprocess and cache keywords at the start rather than pulling from a DataFrame and processing them during each function call. This avoids redundant I/O operations and computations.
+
+## Edit 7: Grouping function in gpt_functions
 - **Objective:** Group related functions together under clear headings 
 - **Details:**
     - (e.g., "File Management Functions", "Batch Processing Functions", "Embedding Functions", "GPT API Functions").
     - This helps readers quickly locate the relevant parts of the code.
 
-## Edit 7: Simplify Complex Functions in gpt_functions
+## Edit 8: Simplify Complex Functions in gpt_functions
 - **Objective:** Simplify complex functions by breaking them down into smaller, single-purpose functions.
 - **Details:**
     - For example, in the `gpt_api_call` function, separate the logic for preparing the `messages_copy` from the actual API call.
     - This makes the code easier to understand and maintain.
 
-## Edit 8: Improve Specific Sections in helper_functionsV7
+## Edit 9: Improve Specific Sections in helper_functionsV7
 - **Objective:** Enhance readability and maintainability by applying specific improvements.
 - **Details:**
     - **Simplify Complex Functions:** Split the `build_model` function into smaller helper functions for token limit and request limit checks. Improve error handling by using specific exception types.
     - **Enhance Documentation and Structure:** Add docstrings to each function explaining their purpose, parameters, and return values. Group related functions under clear headings (e.g., "File Operations", "Batch Processing", "Utility Functions").
 
 
+## Edit 10: Overall Codebase Cleanup
+- **Objective:** Perform general codebase cleanup to enhance readability, maintainability, and adherence to best practices.
+- **Details:** 
+  - **Remove Unused Code:** Identify and remove any unused or redundant code snippets to declutter the codebase.
+  - **Consistent Formatting:** Ensure consistent code formatting, such as indentation, spacing, and naming conventions, throughout the project.
+  - **Docstrings and Comments:** Add or improve docstrings and comments to explain the purpose and functionality of functions, classes, and modules.
+  - **Code Refactoring:** Refactor any complex or convoluted code sections to improve clarity and maintainability.
