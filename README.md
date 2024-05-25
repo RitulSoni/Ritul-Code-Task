@@ -75,11 +75,8 @@ python3 QA_Code_V7.py
 4. [Context_buildingv4.py](#context_buildingv4py)
 5. [Gpt_functions.py](#gpt_functionspy)
 
-
 <details>
-<summary>Click to expand</summary>
-
-# QA_Code_V7.py
+<summary>QA_Code_V7.py</summary>
 
 ### Overview
 `QA_Code_V7.py` is the main script that runs the model. It manages the overall workflow, including setting up parameters, fetching data, and invoking the processing functions.
@@ -149,13 +146,10 @@ flowchart TD
     D11 -->|No| D13
 ```
 In the above diagram each block corresponds to a section of the script, showing how the code progresses through various stages of setup, data retrieval, and processing. 
+</details>
+
 <details>
-
-
-<details>
-<summary>Click to expand</summary>
-
-# QuestionMuniPair.py
+<summary>QuestionMuniPair.py</summary>
 
 ### Class: `QuestionMuniPair`
 
@@ -224,11 +218,10 @@ print(final_response)
 ### Conclusion
 
 The `QuestionMuniPair` class is a crucial element of our project, streamlining the handling and processing of zoning-related questions for municipalities. By managing the state transitions and response parsing, it ensures that the project's workflow remains efficient and robust.
-<details>
+</details>
 
 <details>
-<summary>Click to expand</summary>
-# Helper_functionsV7.py
+<summary>Helper_functionsV7.py</summary>
 
 ### Overview
 `Helper_functionsV7.py` includes a variety of utility functions that support the main script. These functions handle tasks such as loading data, managing files, and assisting with API interactions.
@@ -238,10 +231,8 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 - **Batch Management**: Utilities for managing batch processes and tracking status.
 - **Error Handling**: Functions for capturing and managing errors during processing.
 
-## Helper Functions Overview
-
 <details>
-<summary>Click to expand for more info on helper functions</summary>
+<summary>Helper Functions Overview</summary>
 
 ### Load and Save Functions
 
@@ -271,7 +262,9 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 | `build_model`       | Processes the pair queue, builds batches, and manages the process of creating API calls for model completions.                                                 |
 | `retrieve_batch`    | Retrieves the results of a batch of API calls from a file or directly from the API, depending on the `fake_batch` flag.                                        |
 | `generate_real_response` | Simulates real API responses by generating completions for each request in a batch.                                                                            |
-| `update_pairs`      | Updates the pair queue with the results from a batch of API calls.                                                                                            |
+| `update_pairs`      | Updates the pair queue
+
+ with the results from a batch of API calls.                                                                                            |
 
 ### Token and Question Functions
 
@@ -290,12 +283,10 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 | `filter_muni_list_by_files`     | Filters the list of municipalities to include only those that have corresponding .pkl files in a specified directory.                                          |
 
 </details>
-<details>
+</details>
 
-
 <details>
-<summary>Click to expand</summary>
-# Context_buildingv4.py
+<summary>Context_buildingv4.py</summary>
 
 ### Overview
 `Context_buildingv4.py` is responsible for building the context that the language model sees from Retrieval-Augmented Generation (RAG). This context is critical for ensuring the model has all necessary information to provide accurate answers.
@@ -349,13 +340,10 @@ flowchart TD
     Load_Data --> Context_Building_Functions
     Context_Building_Functions --> Utility_Functions
 ```
+</details>
+
 <details>
-
-
-<details>
-<summary>Click to expand</summary>
-
-# Gpt_functions.py
+<summary>Gpt_functions.py</summary>
 
 ### Overview
 `Gpt_functions.py` encapsulates all interactions with the OpenAI API. This includes functions for making API calls, uploading data, and retrieving results.
@@ -368,7 +356,7 @@ flowchart TD
 ### Flow Diagram
 ![GPT Functions Flow](Gpt_Functions_Flow.png)
 
-<details>
+</details>
 
 ## Contributing
 1. Fork the repository.
