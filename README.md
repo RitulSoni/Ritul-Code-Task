@@ -229,7 +229,6 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 - **Batch Management**: Utilities for managing batch processes and tracking status.
 - **Error Handling**: Functions for capturing and managing errors during processing.
 
-```markdown
 ## Helper Functions Overview
 
 <details>
@@ -282,7 +281,6 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 | `filter_muni_list_by_files`     | Filters the list of municipalities to include only those that have corresponding .pkl files in a specified directory.                                          |
 
 </details>
-```
 
 
 
