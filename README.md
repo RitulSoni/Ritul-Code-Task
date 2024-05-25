@@ -154,14 +154,14 @@ In the above diagram each block corresponds to a section of the script, showing 
 
 The `QuestionMuniPair` class is a core component of our project, responsible for managing the state and processing of question-municipality pairs. This class encapsulates the logic for handling questions about zoning regulations for specific municipalities and leverages large language models to generate and parse responses.
 
-#### Overview
+### Overview
 
 The `QuestionMuniPair` class handles:
 - Initialization of question-municipality pairs.
 - Processing responses from language models.
 - Managing the workflow states, including subtask processing, main question processing, and double-checking responses.
 
-#### Key Responsibilities
+### Key Responsibilities
 
 1. **Initialization**: Sets up the initial state with provided question, municipality, and model information.
 2. **State Management**: Maintains and transitions between different states (e.g., subtasks, main processing, double-checking).
@@ -169,7 +169,7 @@ The `QuestionMuniPair` class handles:
 4. **Context Building**: Utilizes context-building functions to prepare the necessary context for language model queries.
 5. **Cost Calculation**: Calculates the cost of API calls based on token usage.
 
-#### Key Methods
+### Key Methods
 
 - **Initialization (`__init__`)**: Initializes the instance with question, municipality, and model details.
 - **Processing (`process`)**: Orchestrates the processing flow, managing state transitions and response handling.
@@ -180,7 +180,7 @@ The `QuestionMuniPair` class handles:
 - **Cost Calculation (`calc_cost`)**: Calculates the cost of API calls based on the number of tokens used.
 - **Context and Prompt Creation (`create_question_openai_object`, `format_prompt`)**: Prepares and formats the context and prompts for API calls to the language model.
 
-#### Workflow Example
+### Workflow Example
 
 1. **Initialization**:
    ```python
@@ -198,7 +198,7 @@ The `QuestionMuniPair` class handles:
 4. **Final Response**:
    - Once all processing is complete, the `get_final_response` method is called to retrieve the aggregated result.
 
-#### Integration in Project
+### Integration in Project
 
 The `QuestionMuniPair` class is utilized within the main processing loop to handle each question-municipality pair, ensuring that responses are generated, parsed, and validated efficiently. It interacts with various helper functions and context-building modules to prepare the necessary inputs for language model queries and to manage the overall workflow.
 
