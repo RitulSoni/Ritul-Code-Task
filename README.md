@@ -1,7 +1,7 @@
 # AI Zoning Project
 
 ## Introduction
-This project is designed to assist in determining zoning regulations within various municipalities in the United States. The core functionality revolves around processing and responding to zoning-related questions using an AI model. The project includes several key components, each encapsulated in its respective Python file.
+This GitHub repository hosts a project that utilizes Large Language Models (LLMs) to parse zoning documents. We introduce an innovative approach called generative regulatory measurement, which decodes and interprets statutes and administrative documents using LLMs for data collection and analysis. This tool constructs a detailed assessment of U.S. zoning regulations, estimating the correlation between these regulations, housing costs, and construction. Our work demonstrates the effectiveness and reliability of LLMs in measuring and interpreting complex regulatory datasets.
 
 ## Research Foundation
 This project is based on the research paper "[The Costs of Housing Regulation: Evidence From Generative Regulatory Measurement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4627587)" by Alexander Bartik, Arpit Gupta, and Daniel Milo. The paper provides the theoretical foundation and methodology used in this project.
@@ -9,31 +9,63 @@ This project is based on the research paper "[The Costs of Housing Regulation: E
 ## Installation and Setup
 
 ### Prerequisites
-- Python 3.x
-- Required Python libraries (listed in `requirements.txt`)
+- **Python 3.8 or higher**: Ensure Python 3.8+ is installed on your system. You can check your Python version by running `python --version` or `python3 --version` in your terminal.
 
 ### Installation
-1. Clone the repository:
+1. **Clone the Repository**:
+   Clone the project repository to your local machine using the following command:
    ```bash
-   git clone https://github.com/your-repo/zoning-ai.git
+   git clone https://github.com/RitulSoni/Ritul-Code-Task.git
    ```
-2. Navigate to the project directory:
+2. **Navigate to the Project Directory**:
+   Change into the project directory with:
    ```bash
-   cd zoning-ai
+   cd Ritul-Code-Task
    ```
-3. Install the dependencies:
+3. **Install Dependencies**:
+   Install the required Python libraries listed in `requirements.txt` using pip:
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 ### Configuration
-1. Create a `config.yaml` file in the project root directory based on the provided template.
-2. Add your OpenAI API key and other necessary configurations in `config.yaml`.
+1. **Create a `config.yaml` File**:
+   You need to create a `config.yaml` file in the root directory of the project. This file should contain all necessary paths and API keys as per the structure below:
+
+   Here is a basic template for `config.yaml`:
+   ```yaml
+   embeddings: path/to/your/embeddings
+   raw_data: path/to/your/raw_data
+   processed_data: path/to/your/processed_data
+   muni_text: path/to/municipality/texts
+   exllama_path: path/to/exllama/repository
+   llama13b_path: path/to/llama13b/model
+   llama70b_path: path/to/llama70b/model
+   openai_key: your_openai_api_key_here
+   num_neighbors: 5  # or any other appropriate number
+   ```
+
+2. To create embeddings and inference, we have to configure config.yaml for
+
+| Key                 | Description                                                              |
+|---------------------|--------------------------------------------------------------------------|
+| `muni_text`         | Path where the raw text of all municipalities is stored.                 |
+| `embeddings`        | Path where you want to store the embeddings.                             |
+| `raw_data`          | Path where the questions are present.                                    |
+| `exllama_path`      | Path of the cloned exllama repository if using Llama2.                   |
+| `llama13b_path`     | Path where the Llama2 13B model is downloaded.                           |
+| `llama70b_path`     | Path where the Llama2 70B model is downloaded.                           |
+| `openai_key`        | OpenAI API key if you are using GPT.                                     |
+| `processed_data`    | Path where you want to store the inference results.                      |
+| `num_neighbors`     | Optional. Determines the number of chunks of text to include in the context. |
+
+3. **Set up Environment Variables**:
+   For additional security, especially with your API keys, consider using an `.env` file to store sensitive information such as your OpenAI key. Ensure that `.env` is included in your `.gitignore` file to prevent it from being committed to your version control system.
 
 ### Running the Project
-To run the main script:
+Once the configuration is set up, you can run the project by executing the main script from the command line:
 ```bash
-python QA_Code_V7.py
+python3 QA_Code_V7.py
 ```
 
 ## Table of Contents
@@ -130,12 +162,10 @@ python QA_Code_V7.py
   New York University
 
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ## Conclusion
 This guide provides a comprehensive overview of the Zoning AI project, detailing each major component and their roles within the system. By following the installation and setup instructions, you can get the project up and running, and start contributing to its development.
 
 ---
 
-This README includes diagrams that can be added for visual aid. These diagrams should represent the logical flow of each component and can be created using tools like draw.io or any other diagramming software. The file paths in the flow diagrams should be updated to reflect the actual paths where the images will be stored.
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
