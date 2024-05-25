@@ -1,0 +1,7 @@
+pandas
+numpy
+scipy
+pyyaml
+openai
+cohere
+python-dotenv
