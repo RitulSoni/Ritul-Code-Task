@@ -174,9 +174,8 @@ In the above diagram each block corresponds to a section of the script, showing 
 - **Error Handling**: Functions for capturing and managing errors during processing.
 
 ### Helper Functions Overview
-### Helper Functions Overview
 
-#### Load and Save Functions
+### Load and Save Functions
 
 | Function Name       | Description                                                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -189,7 +188,7 @@ In the above diagram each block corresponds to a section of the script, showing 
 | `load_batch_id`     | Loads the batch ID from a file.                                                                                                                                |
 | `save_batch_id`     | Saves the batch ID to a file.                                                                                                                                  |
 
-#### Status and Utility Functions
+### Status and Utility Functions
 
 | Function Name       | Description                                                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -197,7 +196,7 @@ In the above diagram each block corresponds to a section of the script, showing 
 | `flatten_batches`   | Flattens a list of lists into a single list.                                                                                                                   |
 | `slurm_name`        | Generates a unique name based on SLURM task ID environment variables for naming files.                                                                         |
 
-#### Processing Functions
+### Processing Functions
 
 | Function Name       | Description                                                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -206,14 +205,14 @@ In the above diagram each block corresponds to a section of the script, showing 
 | `generate_real_response` | Simulates real API responses by generating completions for each request in a batch.                                                                            |
 | `update_pairs`      | Updates the pair queue with the results from a batch of API calls.                                                                                            |
 
-#### Token and Question Functions
+### Token and Question Functions
 
 | Function Name                      | Description                                                                                                                                                   |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `load_or_fetch_question_details`   | Loads question details from a text file if it exists, otherwise fetches the details using a hypothetical function and stores them in a text file.              |
 | `get_token_count`                  | Calculates the token count for an OpenAI object by encoding the messages using the appropriate tokenizer.                                                      |
 
-#### Municipality Functions
+### Municipality Functions
 
 | Function Name                   | Description                                                                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
