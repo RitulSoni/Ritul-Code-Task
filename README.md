@@ -126,8 +126,50 @@ python3 QA_Code_V7.py
 - **Chunk Sorting**: Sorts text chunks based on relevance using cosine similarity.
 - **Context Selection**: Selects and combines relevant text chunks to form the final context.
 
-### Flow Diagram
-![Context Building Flow](Context_Building_Flow.png)
+### Context_Building Diagram
+
+```mermaid
+flowchart TD
+    subgraph Initialize_Environment
+        A1[Load Libraries]
+        A2[Set Random Seed]
+        A3[Load Environment Variables]
+        A4[Retrieve API Key]
+    end
+
+    subgraph Setup_Directories_and_Configuration
+        B1[Change Working Directory]
+        B2[Load Configuration]
+    end
+
+    subgraph Load_Data
+        C1[Load Question Embeddings]
+        C2[Load Keywords]
+        C3[Set Max Tokens]
+    end
+
+    subgraph Context_Building_Functions
+        D1[Flatten Tree]
+        D2[Sort Chunks]
+        D3[Keyword Reranker]
+        D4[Reranking Parent Function]
+        D5[Semantic Reranker]
+        D6[Select Chunks]
+    end
+
+    subgraph Utility_Functions
+        E1[Get Embedding]
+        E2[Process Text]
+        E3[Get Keywords]
+        E4[Load Tree]
+        E5[Context Builder]
+    end
+
+    Initialize_Environment --> Setup_Directories_and_Configuration
+    Setup_Directories_and_Configuration --> Load_Data
+    Load_Data --> Context_Building_Functions
+    Context_Building_Functions --> Utility_Functions
+```
 
 ## Gpt_functions.py
 
