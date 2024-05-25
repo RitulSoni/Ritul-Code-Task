@@ -76,7 +76,7 @@ python3 QA_Code_V7.py
 5. [Gpt_functions.py](#gpt_functionspy)
 
 
-## QA_Code_V7.py
+# QA_Code_V7.py
 
 ### Overview
 `QA_Code_V7.py` is the main script that runs the model. It manages the overall workflow, including setting up parameters, fetching data, and invoking the processing functions.
@@ -148,7 +148,7 @@ flowchart TD
 In the above diagram each block corresponds to a section of the script, showing how the code progresses through various stages of setup, data retrieval, and processing. 
 
 
-## QuestionMuniPair.py
+# QuestionMuniPair.py
 
 ### Class: `QuestionMuniPair`
 
@@ -219,7 +219,7 @@ print(final_response)
 The `QuestionMuniPair` class is a crucial element of our project, streamlining the handling and processing of zoning-related questions for municipalities. By managing the state transitions and response parsing, it ensures that the project's workflow remains efficient and robust.
 
 
-## Helper_functionsV7.py
+# Helper_functionsV7.py
 
 ### Overview
 `Helper_functionsV7.py` includes a variety of utility functions that support the main script. These functions handle tasks such as loading data, managing files, and assisting with API interactions.
@@ -232,7 +232,7 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 ## Helper Functions Overview
 
 <details>
-<summary>Click to expand</summary>
+<summary>Click to expand for more info on helper functions</summary>
 
 ### Load and Save Functions
 
@@ -284,7 +284,7 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 
 
 
-## Context_buildingv4.py
+# Context_buildingv4.py
 
 ### Overview
 `Context_buildingv4.py` is responsible for building the context that the language model sees from Retrieval-Augmented Generation (RAG). This context is critical for ensuring the model has all necessary information to provide accurate answers.
@@ -339,7 +339,7 @@ flowchart TD
     Context_Building_Functions --> Utility_Functions
 ```
 
-## Gpt_functions.py
+# Gpt_functions.py
 
 ### Overview
 `Gpt_functions.py` encapsulates all interactions with the OpenAI API. This includes functions for making API calls, uploading data, and retrieving results.
