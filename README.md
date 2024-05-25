@@ -68,7 +68,7 @@ Once the configuration is set up, you can run the project by executing the main 
 python3 QA_Code_V7.py
 ```
 
-# Detailed Code File Documentation
+## Detailed Code File Documentation
 <details>
 <summary>QA_Code_V7.py</summary>
 
