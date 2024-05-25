@@ -69,8 +69,8 @@ python3 QA_Code_V7.py
 ```
 
 ## Table of Contents
-1. [QuestionMuniPair.py](#questionmunipairpy)
-2. [QA_Code_V7.py](#qa_code_v7py)
+1. [QA_Code_V7.py](#qa_code_v7py)
+2. [QuestionMuniPair.py](#questionmunipairpy)
 3. [Helper_functionsV7.py](#helper_functionsv7py)
 4. [Context_buildingv4.py](#context_buildingv4py)
 5. [Gpt_functions.py](#gpt_functionspy)
