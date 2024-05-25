@@ -87,8 +87,6 @@ python3 QA_Code_V7.py
 - **Batch Processing**: Manages batching of requests to optimize API calls.
 - **Main Execution**: Controls the flow of the script, ensuring proper sequence of operations.
 
-### Flow Diagram
-
 ### QA_Code_V7 Diagram
 ```mermaid
 flowchart TD
