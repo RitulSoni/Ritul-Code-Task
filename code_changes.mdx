@@ -1,13 +1,20 @@
 ---
-title: My Code Edits
+title: Code Modifications Documentation
 ---
 
-# Code Edits
+# Code Modifications Documentation
 
-List of code edits that need to be done:
+This document lists the necessary code edits for improving security, dependency management, and overall codebase maintainability.
 
+## Edit 1: Dependency Management
 
-## Edit 1: Create a requirements.txt file with all dependencies
+- **Objective:** Create a `requirements.txt` file listing all necessary Python packages.
+- **Details:** This file will include all the dependencies used in the project to facilitate easier setup and consistent environments across different setups.
 
+## Edit 2: Secure API Key Management
 
-## Edit 2: Hide the API key in .env and add it to .gitignore
+- **Objective:** Securely manage API keys using environment variables.
+- **Details:** 
+  - Introduce the `python-dotenv` library to load environment variables from a `.env` file.
+  - Store the Co:here API key in the `.env` file to keep it out of the source code.
+  - Update the `.gitignore` file to exclude the `.env` file from version control, ensuring that sensitive credentials are not exposed in the version history.
