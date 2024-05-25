@@ -75,19 +75,6 @@ python3 QA_Code_V7.py
 4. [Context_buildingv4.py](#context_buildingv4py)
 5. [Gpt_functions.py](#gpt_functionspy)
 
-## QuestionMuniPair.py
-
-### Overview
-`QuestionMuniPair.py` contains a class `QuestionMuniPair` that processes and stores the state of every municipal question pair. This class handles the logic of processing a question related to zoning laws, fetching relevant context, and interacting with the AI model to generate answers.
-
-### Key Components
-- **Initialization**: Sets up the initial state of the object.
-- **Processing Subtasks**: Manages subtask processing if the question requires multiple steps.
-- **Main Processing**: Handles the main question processing, including context building and AI interaction.
-- **Response Handling**: Processes the AI responses and updates the state accordingly.
-
-### Flow Diagram
-![QuestionMuniPair Process Flow](QuestionMuniPair_Process_Flow.png)
 
 ## QA_Code_V7.py
 
@@ -163,6 +150,21 @@ flowchart TD
 In the above diagram each block corresponds to a section of the script, showing how the code progresses through various stages of setup, data retrieval, and processing. 
 
 
+## QuestionMuniPair.py
+
+### Overview
+`QuestionMuniPair.py` contains a class `QuestionMuniPair` that processes and stores the state of every municipal question pair. This class handles the logic of processing a question related to zoning laws, fetching relevant context, and interacting with the AI model to generate answers.
+
+### Key Components
+- **Initialization**: Sets up the initial state of the object.
+- **Processing Subtasks**: Manages subtask processing if the question requires multiple steps.
+- **Main Processing**: Handles the main question processing, including context building and AI interaction.
+- **Response Handling**: Processes the AI responses and updates the state accordingly.
+
+### Flow Diagram
+![QuestionMuniPair Process Flow](QuestionMuniPair_Process_Flow.png)
+
+
 ## Helper_functionsV7.py
 
 ### Overview
@@ -173,7 +175,7 @@ In the above diagram each block corresponds to a section of the script, showing 
 - **Batch Management**: Utilities for managing batch processes and tracking status.
 - **Error Handling**: Functions for capturing and managing errors during processing.
 
-### Helper Functions Overview
+## Helper Functions Overview
 
 ### Load and Save Functions
 
