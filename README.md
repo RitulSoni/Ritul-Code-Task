@@ -349,27 +349,39 @@ flowchart TD
 ### Key Functions
 
 #### API Call Functions
-- **`generate_completion`**: Generates a completion using the OpenAI API based on the provided model, messages, and tools.
-- **`gpt_api_call`**: A wrapper function for making a GPT-3.5 or GPT-4 call with specific parameters like prompt, model, tools, etc.
-- **`gpt_api_wrapper`**: Handles retries and timeouts for API calls to ensure robustness.
+
+| Function Name          | Description                                                                                              |
+|------------------------|----------------------------------------------------------------------------------------------------------|
+| `generate_completion`  | Generates a completion using the OpenAI API based on the provided model, messages, and tools.            |
+| `gpt_api_call`         | A wrapper function for making a GPT-3.5 or GPT-4 call with specific parameters like prompt, model, tools. |
+| `gpt_api_wrapper`      | Handles retries and timeouts for API calls to ensure robustness.                                         |
 
 #### Batch Management Functions
-- **`create_batch`**: Creates a batch of API requests for processing multiple inputs simultaneously.
-- **`retrieve_batch_results`**: Retrieves the results of a batch of API calls, handling completed and failed statuses.
-- **`upload_jsonl`**: Uploads a JSONL file to the OpenAI API for batch processing.
+
+| Function Name            | Description                                                                                               |
+|--------------------------|-----------------------------------------------------------------------------------------------------------|
+| `create_batch`           | Creates a batch of API requests for processing multiple inputs simultaneously.                            |
+| `retrieve_batch_results` | Retrieves the results of a batch of API calls, handling completed and failed statuses.                    |
+| `upload_jsonl`           | Uploads a JSONL file to the OpenAI API for batch processing.                                              |
 
 #### Embedding Functions
-- **`get_embedding`**: Generates embeddings for the provided text using the OpenAI API.
+
+| Function Name            | Description                                                                                               |
+|--------------------------|-----------------------------------------------------------------------------------------------------------|
+| `get_embedding`          | Generates embeddings for the provided text using the OpenAI API.                                          |
 
 #### Utility Functions
-- **`delete_old_files`**: Deletes files older than a week from the OpenAI API to manage storage.
-- **`answer_question_yes_no`**: Defines a function schema for answering yes/no questions.
-- **`keyword_search`**: Defines a function schema for keyword searches.
-- **`answer_question_numerical`**: Defines a function schema for answering numerical questions.
-- **`answer_question_lot_size`**: Defines a function schema for answering lot size questions.
-- **`answer_question_lot_size_residential`**: Defines a function schema for answering residential lot size questions.
-- **`determine_relevant`**: Defines a function schema to determine if a section is relevant to a question.
-- **`parse_explore_section`**: Defines a function schema to parse if a user wants to explore a section.
+
+| Function Name                    | Description                                                                                                                   |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| `delete_old_files`               | Deletes files older than a week from the OpenAI API to manage storage.                                                         |
+| `answer_question_yes_no`         | Defines a function schema for answering yes/no questions.                                                                      |
+| `keyword_search`                 | Defines a function schema for keyword searches.                                                                                |
+| `answer_question_numerical`      | Defines a function schema for answering numerical questions.                                                                   |
+| `answer_question_lot_size`       | Defines a function schema for answering lot size questions.                                                                    |
+| `answer_question_lot_size_residential` | Defines a function schema for answering residential lot size questions.                                                     |
+| `determine_relevant`             | Defines a function schema to determine if a section is relevant to a question.                                                 |
+| `parse_explore_section`          | Defines a function schema to parse if a user wants to explore a section.                                                       |
 
 ### Code Snippet Examples
 
