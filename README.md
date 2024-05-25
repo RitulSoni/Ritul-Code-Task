@@ -101,7 +101,67 @@ python3 QA_Code_V7.py
 - **Main Execution**: Controls the flow of the script, ensuring proper sequence of operations.
 
 ### Flow Diagram
-![QA_Code_V7 Process Flow](QA_Code_V7_Process_Flow.png)
+
+### QA_Code_V7 Diagram
+```mermaid
+flowchart TD
+    subgraph Imports_and_Setup
+        A1[Import os, yaml, sys, helper_functionsV7 as hf]
+        A2[Change Working Directory]
+        A3[Load Configuration from config.yaml]
+    end
+
+    subgraph Parameters
+        B1[Set Model Type]
+        B2[Check if using Windows]
+        B3[Process Command Line Arguments]
+        B4[Set Sample Size]
+    end
+
+    subgraph Get_Data
+        C1[Get List of Munis to Process]
+        C2[Get List of Questions to Process]
+        C3[Drop Specific Rows from Questions]
+        C4[Establish Results Folder]
+    end
+
+    subgraph Main_Code
+        D1[Check Status]
+        D2[Get Batch ID]
+        D3[Retrieve Batch Results]
+        D4{Proceed if First Run or Batch Returned Results}
+        D5[Get Pair Queue]
+        D6[Update Pair Queue with Batch Results]
+        D7[Load Results]
+        D8[Load Errors]
+        D9[Run the Model]
+        D10[Save Results, Errors, and Pair Queue]
+        D11{Batch ID is None}
+        D12[Print Finished Program]
+        D13[Save Batch ID and Print Running Another Batch]
+    end
+
+    Imports_and_Setup --> Parameters
+    Parameters --> Get_Data
+    Get_Data --> Main_Code
+
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
+    D4 -->|Yes| D5
+    D4 -->|No| D14[Print Batch Still Running]
+
+    D5 --> D6
+    D6 --> D7
+    D7 --> D8
+    D8 --> D9
+    D9 --> D10
+    D10 --> D11
+    D11 -->|Yes| D12
+    D11 -->|No| D13
+```
+In the above diagram each block corresponds to a section of the script, showing how the code progresses through various stages of setup, data retrieval, and processing. 
+
 
 ## Helper_functionsV7.py
 
