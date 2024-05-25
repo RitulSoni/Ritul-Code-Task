@@ -42,22 +42,28 @@ This document lists the necessary code edits for improving security, dependency 
     from utils import load_config
     config = load_config()
     ```
+## Edit 5: Optimize Subtask Retrieval in `QuestionMuniPair`
+- **Objective:** Improve the performance and efficiency of retrieving subtask details by implementing a caching mechanism.
+- **Details:**
+  - **Implement Caching for Subtask Details:** Modify the `get_subtasks` function to use a dictionary for caching subtask details. This cache will store subtask details once they are computed for a question ID, reducing redundant data processing on subsequent calls.
+  - The edit aims to reduce computational overhead and improve response time, especially in environments with repetitive questions. This enhancement boosts system performance without adding significant complexity.
 
-
-## Edit 5: Grouping function in gpt_functions
+## Edit 6: Grouping function in gpt_functions
 - **Objective:** Group related functions together under clear headings 
 - **Details:**
     - (e.g., "File Management Functions", "Batch Processing Functions", "Embedding Functions", "GPT API Functions").
     - This helps readers quickly locate the relevant parts of the code.
 
-## Edit 6: Simplify Complex Functions in gpt_functions
+## Edit 7: Simplify Complex Functions in gpt_functions
 - **Objective:** Simplify complex functions by breaking them down into smaller, single-purpose functions.
 - **Details:**
     - For example, in the `gpt_api_call` function, separate the logic for preparing the `messages_copy` from the actual API call.
     - This makes the code easier to understand and maintain.
 
-## Edit 7: Improve Specific Sections in helper_functionsV7
+## Edit 8: Improve Specific Sections in helper_functionsV7
 - **Objective:** Enhance readability and maintainability by applying specific improvements.
 - **Details:**
     - **Simplify Complex Functions:** Split the `build_model` function into smaller helper functions for token limit and request limit checks. Improve error handling by using specific exception types.
     - **Enhance Documentation and Structure:** Add docstrings to each function explaining their purpose, parameters, and return values. Group related functions under clear headings (e.g., "File Operations", "Batch Processing", "Utility Functions").
+
+
