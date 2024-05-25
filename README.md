@@ -254,9 +254,9 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 | `build_model`       | Processes the pair queue, builds batches, and manages the process of creating API calls for model completions.                                                 |
 | `retrieve_batch`    | Retrieves the results of a batch of API calls from a file or directly from the API, depending on the `fake_batch` flag.                                        |
 | `generate_real_response` | Simulates real API responses by generating completions for each request in a batch.                                                                            |
-| `update_pairs`      | Updates the pair queue
+| `update_pairs`      | Updates the pair queue with the results from a batch of API calls.    |
 
- with the results from a batch of API calls.                                                                                            |
+                                                                                          
 
 ### Token and Question Functions
 
