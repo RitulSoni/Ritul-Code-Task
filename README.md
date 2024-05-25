@@ -348,7 +348,7 @@ flowchart TD
 
 ### Key Functions
 
-#### API Call Functions
+### API Call Functions
 
 | Function Name          | Description                                                                                              |
 |------------------------|----------------------------------------------------------------------------------------------------------|
@@ -356,7 +356,7 @@ flowchart TD
 | `gpt_api_call`         | A wrapper function for making a GPT-3.5 or GPT-4 call with specific parameters like prompt, model, tools. |
 | `gpt_api_wrapper`      | Handles retries and timeouts for API calls to ensure robustness.                                         |
 
-#### Batch Management Functions
+### Batch Management Functions
 
 | Function Name            | Description                                                                                               |
 |--------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -364,13 +364,13 @@ flowchart TD
 | `retrieve_batch_results` | Retrieves the results of a batch of API calls, handling completed and failed statuses.                    |
 | `upload_jsonl`           | Uploads a JSONL file to the OpenAI API for batch processing.                                              |
 
-#### Embedding Functions
+### Embedding Functions
 
 | Function Name            | Description                                                                                               |
 |--------------------------|-----------------------------------------------------------------------------------------------------------|
 | `get_embedding`          | Generates embeddings for the provided text using the OpenAI API.                                          |
 
-#### Utility Functions
+### Utility Functions
 
 | Function Name                    | Description                                                                                                                   |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
