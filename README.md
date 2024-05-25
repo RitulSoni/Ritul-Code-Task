@@ -77,7 +77,7 @@ python3 QA_Code_V7.py
 
 
 <details>
-<summary>Click to expand for more info on helper functions</summary>
+<summary>Click to expand</summary>
 
 # QA_Code_V7.py
 
@@ -153,7 +153,7 @@ In the above diagram each block corresponds to a section of the script, showing 
 
 
 <details>
-<summary>Click to expand for more info on helper functions</summary>
+<summary>Click to expand</summary>
 
 # QuestionMuniPair.py
 
@@ -226,7 +226,8 @@ print(final_response)
 The `QuestionMuniPair` class is a crucial element of our project, streamlining the handling and processing of zoning-related questions for municipalities. By managing the state transitions and response parsing, it ensures that the project's workflow remains efficient and robust.
 <details>
 
-
+<details>
+<summary>Click to expand</summary>
 # Helper_functionsV7.py
 
 ### Overview
@@ -289,9 +290,11 @@ The `QuestionMuniPair` class is a crucial element of our project, streamlining t
 | `filter_muni_list_by_files`     | Filters the list of municipalities to include only those that have corresponding .pkl files in a specified directory.                                          |
 
 </details>
+<details>
 
 
-
+<details>
+<summary>Click to expand</summary>
 # Context_buildingv4.py
 
 ### Overview
@@ -346,6 +349,11 @@ flowchart TD
     Load_Data --> Context_Building_Functions
     Context_Building_Functions --> Utility_Functions
 ```
+<details>
+
+
+<details>
+<summary>Click to expand</summary>
 
 # Gpt_functions.py
 
@@ -360,7 +368,7 @@ flowchart TD
 ### Flow Diagram
 ![GPT Functions Flow](Gpt_Functions_Flow.png)
 
-
+<details>
 
 ## Contributing
 1. Fork the repository.
