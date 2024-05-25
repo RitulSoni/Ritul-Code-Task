@@ -173,8 +173,57 @@ In the above diagram each block corresponds to a section of the script, showing 
 - **Batch Management**: Utilities for managing batch processes and tracking status.
 - **Error Handling**: Functions for capturing and managing errors during processing.
 
-### Flow Diagram
-![Helper Functions Flow](Helper_Functions_Flow.png)
+### Helper Functions Overview
+### Helper Functions Overview
+
+#### Load and Save Functions
+
+| Function Name       | Description                                                                                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `load_pair_queue`   | Loads the pair queue from a pickle file if it exists, otherwise creates a new queue with `QuestionMuniPair` instances for each question-municipality pair.    |
+| `load_results`      | Loads the results from a pickle file if it exists, otherwise returns an empty list.                                                                            |
+| `load_errors`       | Loads the errors from a pickle file if it exists, otherwise returns an empty list.                                                                             |
+| `save_results`      | Saves the results to a pickle file.                                                                                                                            |
+| `save_errors`       | Saves the errors to a pickle file.                                                                                                                             |
+| `save_pair_queue`   | Saves the pair queue to a pickle file and updates the status check file. If the queue is empty, it deletes the pickle file.                                    |
+| `load_batch_id`     | Loads the batch ID from a file.                                                                                                                                |
+| `save_batch_id`     | Saves the batch ID to a file.                                                                                                                                  |
+
+#### Status and Utility Functions
+
+| Function Name       | Description                                                                                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `check_status`      | Checks the status from a status check file, returning `True` if the file does not exist or the status is "True", otherwise returns `False`.                    |
+| `flatten_batches`   | Flattens a list of lists into a single list.                                                                                                                   |
+| `slurm_name`        | Generates a unique name based on SLURM task ID environment variables for naming files.                                                                         |
+
+#### Processing Functions
+
+| Function Name       | Description                                                                                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `build_model`       | Processes the pair queue, builds batches, and manages the process of creating API calls for model completions.                                                 |
+| `retrieve_batch`    | Retrieves the results of a batch of API calls from a file or directly from the API, depending on the `fake_batch` flag.                                        |
+| `generate_real_response` | Simulates real API responses by generating completions for each request in a batch.                                                                            |
+| `update_pairs`      | Updates the pair queue with the results from a batch of API calls.                                                                                            |
+
+#### Token and Question Functions
+
+| Function Name                      | Description                                                                                                                                                   |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `load_or_fetch_question_details`   | Loads question details from a text file if it exists, otherwise fetches the details using a hypothetical function and stores them in a text file.              |
+| `get_token_count`                  | Calculates the token count for an OpenAI object by encoding the messages using the appropriate tokenizer.                                                      |
+
+#### Municipality Functions
+
+| Function Name                   | Description                                                                                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `get_munis`                     | Retrieves the list of municipalities to process, filtering and splitting them based on training/testing type and parallelization requirements.                |
+| `split_munis_across_nodes`      | Splits the list of municipalities across multiple nodes for parallel processing based on SLURM environment variables.                                          |
+| `filter_pioneer`                | Filters the list of municipalities to include only those in the training, testing, or Wharton dataset.                                                         |
+| `filter_muni_list_by_files`     | Filters the list of municipalities to include only those that have corresponding .pkl files in a specified directory.                                          |
+
+
+
 
 ## Context_buildingv4.py
 
