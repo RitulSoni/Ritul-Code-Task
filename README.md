@@ -6,6 +6,35 @@ This project is designed to assist in determining zoning regulations within vari
 ## Research Foundation
 This project is based on the research paper "[The Costs of Housing Regulation: Evidence From Generative Regulatory Measurement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4627587)" by Alexander Bartik, Arpit Gupta, and Daniel Milo. The paper provides the theoretical foundation and methodology used in this project.
 
+## Installation and Setup
+
+### Prerequisites
+- Python 3.x
+- Required Python libraries (listed in `requirements.txt`)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/zoning-ai.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd zoning-ai
+   ```
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Configuration
+1. Create a `config.yaml` file in the project root directory based on the provided template.
+2. Add your OpenAI API key and other necessary configurations in `config.yaml`.
+
+### Running the Project
+To run the main script:
+```bash
+python QA_Code_V7.py
+```
 
 ## Table of Contents
 1. [QuestionMuniPair.py](#questionmunipairpy)
@@ -81,35 +110,7 @@ This project is based on the research paper "[The Costs of Housing Regulation: E
 ### Flow Diagram
 ![GPT Functions Flow](Gpt_Functions_Flow.png)
 
-## Installation and Setup
 
-### Prerequisites
-- Python 3.x
-- Required Python libraries (listed in `requirements.txt`)
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/zoning-ai.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd zoning-ai
-   ```
-3. Install the dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Configuration
-1. Create a `config.yaml` file in the project root directory based on the provided template.
-2. Add your OpenAI API key and other necessary configurations in `config.yaml`.
-
-### Running the Project
-To run the main script:
-```bash
-python QA_Code_V7.py
-```
 
 ## Contributing
 1. Fork the repository.
